@@ -1,0 +1,121 @@
+/* About Section */
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.clinic-features {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.clinic-features li {
+  margin-bottom: 8px;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#readMoreBtn, .btn-contact {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#readMoreBtn {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+#readMoreBtn:hover {
+  background-color: #0096c7;
+}
+
+.btn-contact {
+  background-color: #0077b6;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-contact:hover {
+  background-color: #005f8a;
+}
+
+.more-content {
+  display: none;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .clinic-features {
+    padding-left: 0;
+    list-style: none;
+  }
+}

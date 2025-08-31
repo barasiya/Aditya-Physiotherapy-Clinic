@@ -1,0 +1,120 @@
+/* Services Section Styles */
+.services {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #0077b6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+/* Grid Layout: 3 cards per row */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Glassmorphism Card Style */
+.service-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  max-width: 280px;
+}
+
+/* Card Image */
+.service-card img {
+  width: 90px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Card Title */
+.service-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  color: #00b4d8;
+  transition: color 0.3s ease;
+}
+
+/* Card Description */
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hover Effects */
+.service-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.service-card:hover img {
+  transform: scale(1.1) rotate(3deg);
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+}
+
+.service-card:hover h3 {
+  color: #0077b6;
+}
+
+/* Fade-in Animation */
+.service-card.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.service-card.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+  .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+  .service-card {
+    padding: 30px 20px;
+    max-width: 240px; 
+  }
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+}

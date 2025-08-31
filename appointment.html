@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - Aditya Physiotherapy Clinic</title>
+  <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+
+  <section id="appointment" class="section appointment-section">
+    <h2>Book an Appointment</h2>
+    <form class="appointment-form" id="appointmentForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Additional Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write any notes..."></textarea>
+      </div>
+      <button type="submit" class="btn">Submit Appointment</button>
+    </form>
+    <p id="successMessage">
+      Thank you! Your appointment has been submitted.
+    </p>
+  </section>
+
+  <script src="appointment.js"></script>
+</body>
+</html>

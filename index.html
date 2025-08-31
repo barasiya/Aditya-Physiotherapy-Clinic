@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Physiotherapy Clinic & Day Care Services</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Clinic Logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="142542-780232247_small.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Aditya Physiotherapy Clinic & Day Care Services</h1>
+      <p>Providing professional physiotherapy and caring services for all ages.</p>
+      <a href="#appointment" class="btn">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- JS Script -->
+  <script>
+    // Smooth scroll for navbar links and hero button
+    document.querySelectorAll('.navbar a, .hero a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Navbar active link highlight on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Services Section -->
+<link rel="stylesheet" href="services.css">
+
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Providing professional physiotherapy, rehabilitation, and day care services for all ages.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/electro_therapy.png" alt="Electro Therapy">
+        <h3>Electro Therapy</h3>
+        <p>Electrical stimulation treatments to relieve pain and improve muscle function.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/manual_therapy.png" alt="Manual Therapy">
+        <h3>Manual Therapy</h3>
+        <p>Hands-on techniques for joint mobilization, muscle relaxation, and pain reduction.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/massage_therapy.png" alt="Massage Therapy">
+        <h3>Massage Therapy</h3>
+        <p>Professional massage therapy to reduce stress, pain, and improve overall well-being.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/daycare.png" alt="Day Care">
+        <h3>Day Care</h3>
+        <p>Caring services for children, elderly, and patients needing assistance with daily activities.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/rehabilitation.png" alt="Rehabilitation">
+        <h3>Rehabilitation</h3>
+        <p>Structured rehab programs for post-surgery recovery, stroke, paralysis, and injury management.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/exercise_therapy.png" alt="Exercise Therapy">
+        <h3>Exercise Therapy</h3>
+        <p>Guided physical exercises to restore strength, flexibility, and improve mobility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inline JS for fade-in effect -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".service-card");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // fade in only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => {
+    card.classList.add("fade-in");
+    observer.observe(card);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Treatments Section -->
+<link rel="stylesheet" href="treatments.css">
+
+<section id="treatments" class="treatments">
+  <div class="container">
+    <h2 class="section-title">Our Treatments</h2>
+    <p class="section-subtitle">
+      Providing the best physiotherapy treatments to relieve pain, restore function, and improve well-being.
+    </p>
+
+    <div class="treatments-grid">
+      <div class="treatment-card">
+        <img src="images/electro_therapy.png" alt="Electro Therapy">
+        <h3>Electro Therapy</h3>
+        <p>Electrical stimulation to reduce pain, improve circulation, and enhance muscle function.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/manual_therapy.png" alt="Manual Therapy">
+        <h3>Manual Therapy</h3>
+        <p>Hands-on joint mobilization, muscle relaxation, and soft tissue techniques for pain relief.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/massage_therapy.png" alt="Massage Therapy">
+        <h3>Massage Therapy</h3>
+        <p>Professional massage for stress reduction, improved circulation, and relaxation.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/exercise_therapy.png" alt="Exercise Therapy">
+        <h3>Exercise Therapy</h3>
+        <p>Guided exercises to restore strength, flexibility, and mobility after injury or surgery.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/rehabilitation.png" alt="Rehabilitation">
+        <h3>Rehabilitation</h3>
+        <p>Structured rehab programs for post-surgery, stroke recovery, paralysis, and injury management.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/hydrotherapy.png" alt="Hydrotherapy">
+        <h3>Hydrotherapy</h3>
+        <p>Water-based therapy to reduce stress on joints, enhance movement, and speed recovery.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/acupuncture.png" alt="Acupuncture">
+        <h3>Acupuncture</h3>
+        <p>Traditional technique to relieve pain and improve body balance through targeted points.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/postural_correction.png" alt="Postural Correction">
+        <h3>Postural Correction</h3>
+        <p>Techniques and exercises to improve posture and prevent chronic pain or musculoskeletal issues.</p>
+      </div>
+
+      <div class="treatment-card">
+        <img src="images/neck_back_pain.png" alt="Neck & Back Pain Treatment">
+        <h3>Neck & Back Pain Treatment</h3>
+        <p>Specialized therapies to alleviate chronic neck and back pain and restore mobility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inline JS for fade-in animation -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".treatment-card");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Fade in only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => {
+    card.classList.add("fade-in");
+    observer.observe(card);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="about.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <!-- Image -->
+        <div class="about-image">
+          <img src="images/clinic_front.png" alt="Aditya Physiotherapy Clinic">
+        </div>
+
+        <!-- Text Content -->
+        <div class="about-text">
+          <h2>About Aditya Physiotherapy Clinic & Day Care Services</h2>
+          <p>
+            At <strong>Aditya Physiotherapy Clinic</strong>, we specialize in rehabilitation and restoration of human function. Led by <strong>Dr. Minakshi Gupta</strong>, our team provides expert care to patients of all ages.
+          </p>
+          <p>
+            Our clinic offers advanced physiotherapy treatments, day care services, and personalized programs for pre & post-operative rehabilitation, sports injuries, chronic pain, and neurological conditions.
+          </p>
+
+          <ul class="clinic-features">
+            <li>Electro Therapy, Manual Therapy, MFR</li>
+            <li>Traction, Exercise Therapy, Taping</li>
+            <li>Dry Needling & Cupping Therapy</li>
+            <li>Home Care & Ambulance Services</li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="about-buttons">
+            <button id="readMoreBtn">Read More</button>
+            <a href="#contact" class="btn-contact">Book Appointment</a>
+          </div>
+
+          <!-- Hidden Content -->
+          <div id="moreContent" class="more-content">
+            <p>
+              Our clinic also specializes in managing conditions such as cerebral palsy, osteoarthritis, cervical/lumbar spondylitis, carpal tunnel syndrome, frozen shoulder, and post-pregnancy workouts. 
+              We ensure a caring and supportive environment for recovery.
+            </p>
+            <p>
+              Visit us to experience professional physiotherapy with a personal touch. Your health is our top priority!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS: Read More toggle -->
+  <script>
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const moreContent = document.getElementById('moreContent');
+
+    readMoreBtn.addEventListener('click', () => {
+      if(moreContent.style.display === "block") {
+        moreContent.style.display = "none";
+        readMoreBtn.textContent = "Read More";
+      } else {
+        moreContent.style.display = "block";
+        readMoreBtn.textContent = "Read Less";
+      }
+    });
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="appointment.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section id="appointment" class="appointment-section">
+  <div class="container">
+    <h2>Book Appointment</h2>
+    <p>Fill the form below to schedule your physiotherapy session or day care service.</p>
+
+    <!-- FormSubmit form -->
+    <form id="appointmentForm" action="https://formsubmit.co/aakashbarasiya2001@gmail.com" method="POST" target="hidden_iframe">
+      <!-- Disable captcha -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="Full Name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Mobile Number *</label>
+        <input type="tel" id="phone" name="Mobile Number" placeholder="1234567890" pattern="[0-9]{10}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email (Optional)</label>
+        <input type="email" id="email" name="Email" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="treatment">Select Treatment / Service *</label>
+        <select id="treatment" name="Treatment / Service" required>
+          <option value="">--Select--</option>
+          <option value="Physiotherapy">Physiotherapy</option>
+          <option value="Day Care Services">Day Care Services</option>
+          <option value="Home Care">Home Care</option>
+          <option value="Pre/Post Surgery Rehab">Pre/Post Surgery Rehab</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Preferred Date *</label>
+        <input type="date" id="date" name="Preferred Date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Preferred Time *</label>
+        <input type="time" id="time" name="Preferred Time" required>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="Additional Notes" placeholder="Any special requirements..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Book Appointment</button>
+      <p id="successMessage" class="success-message" role="alert"></p>
+    </form>
+
+    <!-- Hidden iframe for FormSubmit -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("appointmentForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", (e) => {
+    // Validation
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const treatment = document.getElementById("treatment").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    if(!name || !phone || !treatment || !date || !time){
+      alert("Please fill all required fields!");
+      e.preventDefault();
+      return;
+    }
+
+    if(!/^\d{10}$/.test(phone)){
+      alert("Please enter a valid 10-digit mobile number.");
+      e.preventDefault();
+      return;
+    }
+
+    const today = new Date().toISOString().split("T")[0];
+    if(date < today){
+      alert("Please select a valid date.");
+      e.preventDefault();
+      return;
+    }
+
+    // Show success message locally
+    successMessage.textContent = `Thank you, ${name}! Your appointment for ${treatment} on ${date} at ${time} has been booked.`;
+    successMessage.style.display = "block";
+
+    // Reset form after 5 seconds
+    setTimeout(() => {
+      successMessage.style.display = "none";
+      form.reset();
+    }, 5000);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="footer.css">
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo & Description -->
+    <div class="footer-logo">
+     
+      <p>
+        Aditya Physiotherapy Clinic & Day Care Services provides expert care, rehabilitation, and physiotherapy for all ages.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#hero" class="scroll-link">Home</a></li>
+        <li><a href="#services" class="scroll-link">Services</a></li>
+        <li><a href="#treatments" class="scroll-link">Treatments</a></li>
+        <li><a href="#about" class="scroll-link">About</a></li>
+        <li><a href="#appointment" class="scroll-link">Book Appointment</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📍 Shop No. 22, Indus Garden, Bhopal</p>
+      <p>📞 +91 9479967310</p>
+      <p>✉️ info@adityaphysio.com</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+        <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+        <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+        <li><a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>© <span id="currentYear"></span> Aditya Physiotherapy Clinic & Day Care Services. All rights reserved.</p>
+    <p id="typed-footer"></p>
+  </div>
+</footer>
+
+<!-- Typed.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Footer JS -->
+<script>
+window.addEventListener("load", function() {
+  // Smooth scroll
+  document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetEl = document.getElementById(targetId);
+      if(targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Dynamic current year
+  const yearElement = document.getElementById('currentYear');
+  if(yearElement) yearElement.textContent = new Date().getFullYear();
+
+  // Typed.js initialization
+  if(document.getElementById('typed-footer')) {
+    new Typed('#typed-footer', {
+      strings: [
+        "Thank you for visiting our clinic 💖",
+        "Providing expert physiotherapy care 🏥",
+        "Book your appointment today!",
+        "Follow us on social media 🌐"
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|"
+    });
+  }
+});
+</script>

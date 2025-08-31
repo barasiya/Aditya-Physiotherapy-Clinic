@@ -1,0 +1,117 @@
+/* Treatments Section */
+.treatments {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f0f4f8, #e0f7fa);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #0077b6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+/* Grid Layout: 3 Columns */
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Treatment Cards */
+.treatment-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* Card Image */
+.treatment-card img {
+  width: 80px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Card Title */
+.treatment-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0077b6;
+  transition: color 0.3s ease;
+}
+
+/* Card Description */
+.treatment-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Hover Effects */
+.treatment-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.treatment-card:hover img {
+  transform: scale(1.1) rotate(2deg);
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.25));
+}
+
+.treatment-card:hover h3 {
+  color: #00b4d8;
+}
+
+/* Fade-in Animation */
+.treatment-card.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.treatment-card.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .treatments-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+  .treatment-card {
+    max-width: 220px;
+    padding: 20px 15px;
+  }
+  .treatment-card h3 {
+    font-size: 1.3rem;
+  }
+}
