@@ -6,19 +6,22 @@
   <title>Aditya Physiotherapy Clinic & Day Care Services</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Homepage CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header class="header">
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
     <div class="logo">
-   <img src="/physical-therapy-logo-design-medical-health-wellness-vector.jpg" alt="Clinic Logo">
+      <img src="/ad.jpeg" alt="Clinic Logo">
     </div>
+
+    <!-- Desktop Navbar -->
     <nav class="navbar">
-      <ul>
+      <ul class="nav-center">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#treatments">Treatments</a></li>
@@ -26,54 +29,68 @@
         <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
       </ul>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="142542-780232247_small.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Welcome to Aditya Physiotherapy Clinic & Day Care Services</h1>
-      <p>Providing professional physiotherapy and caring services for all ages.</p>
-      <a href="#appointment" class="btn">Book Appointment</a>
+    <!-- Call Now Right -->
+    <div class="nav-right">
+      <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
     </div>
-  </section>
 
-  <!-- JS Script -->
-  <script>
-    // Smooth scroll for navbar links and hero button
-    document.querySelectorAll('.navbar a, .hero a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
+      <li><a href="tel:+919876543210" class="btn-call-nav">Call Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero Section with Video -->
+<section id="hero" class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="/142542-780232247_small.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Aditya Physiotherapy Clinic</h1>
+    <p>Your Health, Our Priority</p>
+    <div class="hero-buttons">
+      <a href="#appointment" class="btn">Book Appointment</a>
+      <a href="tel:+919876543210" class="btn btn-call">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      hamburger.classList.remove('active');
     });
-
-    // Navbar active link highlight on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80;
-        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
 
@@ -88,75 +105,75 @@
 
 
 
-<!-- Services Section -->
+
 <link rel="stylesheet" href="services.css">
 
-<section id="services" class="services">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle">Providing professional physiotherapy, rehabilitation, and day care services for all ages.</p>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Providing professional physiotherapy, rehabilitation, and day care services for all ages.</p>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="images/electro_therapy.png" alt="Electro Therapy">
-        <h3>Electro Therapy</h3>
-        <p>Electrical stimulation treatments to relieve pain and improve muscle function.</p>
-      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/electro_therapy.png" alt="Electro Therapy">
+          <h3>Electro Therapy</h3>
+          <p>Electrical stimulation treatments to relieve pain and improve muscle function.</p>
+        </div>
 
-      <div class="service-card">
-        <img src="images/manual_therapy.png" alt="Manual Therapy">
-        <h3>Manual Therapy</h3>
-        <p>Hands-on techniques for joint mobilization, muscle relaxation, and pain reduction.</p>
-      </div>
+        <div class="service-card">
+          <img src="images/manual_therapy.png" alt="Manual Therapy">
+          <h3>Manual Therapy</h3>
+          <p>Hands-on techniques for joint mobilization, muscle relaxation, and pain reduction.</p>
+        </div>
 
-      <div class="service-card">
-        <img src="images/massage_therapy.png" alt="Massage Therapy">
-        <h3>Massage Therapy</h3>
-        <p>Professional massage therapy to reduce stress, pain, and improve overall well-being.</p>
-      </div>
+        <div class="service-card">
+          <img src="images/massage_therapy.png" alt="Massage Therapy">
+          <h3>Massage Therapy</h3>
+          <p>Professional massage therapy to reduce stress, pain, and improve overall well-being.</p>
+        </div>
 
-      <div class="service-card">
-        <img src="images/daycare.png" alt="Day Care">
-        <h3>Day Care</h3>
-        <p>Caring services for children, elderly, and patients needing assistance with daily activities.</p>
-      </div>
+        <div class="service-card">
+          <img src="images/daycare.png" alt="Day Care">
+          <h3>Day Care</h3>
+          <p>Caring services for children, elderly, and patients needing assistance with daily activities.</p>
+        </div>
 
-      <div class="service-card">
-        <img src="images/rehabilitation.png" alt="Rehabilitation">
-        <h3>Rehabilitation</h3>
-        <p>Structured rehab programs for post-surgery recovery, stroke, paralysis, and injury management.</p>
-      </div>
+        <div class="service-card">
+          <img src="images/rehabilitation.png" alt="Rehabilitation">
+          <h3>Rehabilitation</h3>
+          <p>Structured rehab programs for post-surgery recovery, stroke, paralysis, and injury management.</p>
+        </div>
 
-      <div class="service-card">
-        <img src="images/exercise_therapy.png" alt="Exercise Therapy">
-        <h3>Exercise Therapy</h3>
-        <p>Guided physical exercises to restore strength, flexibility, and improve mobility.</p>
+        <div class="service-card">
+          <img src="images/exercise_therapy.png" alt="Exercise Therapy">
+          <h3>Exercise Therapy</h3>
+          <p>Guided physical exercises to restore strength, flexibility, and improve mobility.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Inline JS for fade-in effect -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".service-card");
+  <!-- Fade-in Effect -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".service-card");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // fade in only once
-      }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // animate only once
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.classList.add("fade-in");
+      observer.observe(card);
     });
-  }, { threshold: 0.1 });
-
-  cards.forEach(card => {
-    card.classList.add("fade-in");
-    observer.observe(card);
   });
-});
-</script>
-
+  </script>
 
 
 
@@ -291,70 +308,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <link rel="stylesheet" href="about.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="about-content">
-        <!-- Image -->
-        <div class="about-image">
-          <img src="images/clinic_front.png" alt="Aditya Physiotherapy Clinic">
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-content">
+      
+      <!-- Image -->
+      <div class="about-image">
+        <img src="/a.jpeg" alt="Doctor Team - Aditya Physiotherapy Clinic">
+      </div>
+
+      <!-- Text Content -->
+      <div class="about-text">
+        <h2>About Aditya Physiotherapy Clinic & Day Care Services</h2>
+        <p>
+          At <strong>Aditya Physiotherapy Clinic</strong>, we specialize in rehabilitation and restoration of human function. 
+          Led by <strong>Dr. Minakshi Gupta</strong>, our team provides expert care to patients of all ages.
+        </p>
+
+        <!-- Doctor Info -->
+        <div class="doctor-info">
+          <p><strong>Qualification:</strong> BPT, MPT (Orthopaedics & Sports Rehabilitation)</p>
+          <p><strong>Experience:</strong> 10+ Years in Physiotherapy & Rehabilitation</p>
+          <p><strong>Mission:</strong> To deliver compassionate, personalized, and evidence-based physiotherapy care that restores health, improves mobility, and enhances quality of life.</p>
         </div>
 
-        <!-- Text Content -->
-        <div class="about-text">
-          <h2>About Aditya Physiotherapy Clinic & Day Care Services</h2>
+        <p>
+          Our clinic offers advanced physiotherapy treatments, day care services, and personalized programs for pre & post-operative rehabilitation, sports injuries, chronic pain, and neurological conditions.
+        </p>
+
+        <!-- Clinic Features -->
+        <ul class="clinic-features">
+          <li>Electro Therapy, Manual Therapy, MFR</li>
+          <li>Traction, Exercise Therapy, Taping</li>
+          <li>Dry Needling & Cupping Therapy</li>
+          <li>Home Care & Ambulance Services</li>
+        </ul>
+
+        <!-- Buttons -->
+        <div class="about-buttons">
+          <a href="javascript:void(0)" id="readMoreBtn" class="btn">Read More</a>
+          <a href="#appointment" class="btn btn-appointment">Book Appointment</a>
+        </div>
+
+        <!-- Hidden Content -->
+        <div id="moreContent" class="more-content">
           <p>
-            At <strong>Aditya Physiotherapy Clinic</strong>, we specialize in rehabilitation and restoration of human function. Led by <strong>Dr. Minakshi Gupta</strong>, our team provides expert care to patients of all ages.
+            Our clinic also specializes in managing conditions such as cerebral palsy, osteoarthritis, cervical/lumbar spondylitis, carpal tunnel syndrome, frozen shoulder, and post-pregnancy workouts. 
+            We ensure a caring and supportive environment for recovery.
           </p>
           <p>
-            Our clinic offers advanced physiotherapy treatments, day care services, and personalized programs for pre & post-operative rehabilitation, sports injuries, chronic pain, and neurological conditions.
+            Visit us to experience professional physiotherapy with a personal touch. Your health is our top priority!
           </p>
-
-          <ul class="clinic-features">
-            <li>Electro Therapy, Manual Therapy, MFR</li>
-            <li>Traction, Exercise Therapy, Taping</li>
-            <li>Dry Needling & Cupping Therapy</li>
-            <li>Home Care & Ambulance Services</li>
-          </ul>
-
-          <!-- Buttons -->
-          <div class="about-buttons">
-            <button id="readMoreBtn">Read More</button>
-            <a href="#contact" class="btn-contact">Book Appointment</a>
-          </div>
-
-          <!-- Hidden Content -->
-          <div id="moreContent" class="more-content">
-            <p>
-              Our clinic also specializes in managing conditions such as cerebral palsy, osteoarthritis, cervical/lumbar spondylitis, carpal tunnel syndrome, frozen shoulder, and post-pregnancy workouts. 
-              We ensure a caring and supportive environment for recovery.
-            </p>
-            <p>
-              Visit us to experience professional physiotherapy with a personal touch. Your health is our top priority!
-            </p>
-          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- JS: Read More toggle -->
-  <script>
-    const readMoreBtn = document.getElementById('readMoreBtn');
-    const moreContent = document.getElementById('moreContent');
+<!-- JS: Read More toggle -->
+<script>
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  const moreContent = document.getElementById('moreContent');
 
-    readMoreBtn.addEventListener('click', () => {
-      if(moreContent.style.display === "block") {
-        moreContent.style.display = "none";
-        readMoreBtn.textContent = "Read More";
-      } else {
-        moreContent.style.display = "block";
-        readMoreBtn.textContent = "Read Less";
-      }
-    });
-  </script>
-</body>
+  readMoreBtn.addEventListener('click', () => {
+    if(moreContent.style.display === "block") {
+      moreContent.style.display = "none";
+      readMoreBtn.textContent = "Read More";
+    } else {
+      moreContent.style.display = "block";
+      readMoreBtn.textContent = "Read Less";
+    }
+  });
+</script>
 
 
 
@@ -381,11 +407,13 @@ document.addEventListener("DOMContentLoaded", () => {
     <h2>Book Appointment</h2>
     <p>Fill the form below to schedule your physiotherapy session or day care service.</p>
 
-    <!-- FormSubmit form -->
-    <form id="appointmentForm" action="https://formsubmit.co/aakashbarasiya2001@gmail.com" method="POST" target="hidden_iframe">
+    <!-- ✅ Fixed Form (no iframe, no target) -->
+    <form id="appointmentForm" action="https://formsubmit.co/aakashbarasiya2001@gmail.com" method="POST">
       <!-- Disable captcha -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <!-- Optional: Redirect after submit -->
+      <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
 
       <div class="form-group">
         <label for="name">Full Name *</label>
@@ -431,9 +459,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <button type="submit" class="submit-btn">Book Appointment</button>
       <p id="successMessage" class="success-message" role="alert"></p>
     </form>
-
-    <!-- Hidden iframe for FormSubmit -->
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
   </div>
 </section>
 
@@ -469,18 +494,235 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Show success message locally
+    // Local success message (shown instantly)
     successMessage.textContent = `Thank you, ${name}! Your appointment for ${treatment} on ${date} at ${time} has been booked.`;
     successMessage.style.display = "block";
 
-    // Reset form after 5 seconds
+    // Message hide after 5 sec
     setTimeout(() => {
       successMessage.style.display = "none";
-      form.reset();
     }, 5000);
   });
 });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="gallery.css">
+
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">Our Gallery</h2>
+    <p class="section-subtitle">Take a look at our clinic, facilities, and treatments in action.</p>
+
+    <div class="gallery-grid">
+      <!-- Images -->
+      <div class="gallery-item">
+        <img src="/a.jpeg" alt="Clinic Interior">
+      </div>
+      <div class="gallery-item">
+        <img src="images/clinic_exterior.jpg" alt="Clinic Exterior">
+      </div>
+      <div class="gallery-item">
+        <img src="images/machine1.jpg" alt="Physiotherapy Machine">
+      </div>
+      <div class="gallery-item">
+        <img src="images/treatment1.jpg" alt="Treatment in Action">
+      </div>
+      <div class="gallery-item">
+        <img src="images/before_after1.jpg" alt="Before & After">
+      </div>
+      <div class="gallery-item">
+        <img src="images/before_after2.jpg" alt="Before & After">
+      </div>
+
+      <!-- Videos -->
+      <div class="gallery-item">
+        <video src="videos/patient_exercise.mp4" controls></video>
+      </div>
+      <div class="gallery-item">
+        <video src="videos/patient_therapy.mp4" controls></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" style="display:none;">
+  <video class="lightbox-video" id="lightbox-video" controls style="display:none;"></video>
+</div>
+
+<!-- JS: Images & Videos Lightbox -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxVideo = document.getElementById("lightbox-video");
+  const closeBtn = document.querySelector(".lightbox .close");
+
+  // Images click
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+      lightboxImg.style.display = "block";
+      lightboxVideo.style.display = "none";
+      lightboxVideo.pause();
+    });
+  });
+
+  // Videos click
+  document.querySelectorAll(".gallery-item video").forEach(video => {
+    video.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxVideo.src = video.src;
+      lightboxVideo.style.display = "block";
+      lightboxImg.style.display = "none";
+      lightboxVideo.play();
+    });
+  });
+
+  // Close lightbox
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    lightboxVideo.pause();
+  });
+
+  // Close when clicking outside
+  lightbox.addEventListener("click", (e) => {
+    if(e.target === lightbox){
+      lightbox.style.display = "none";
+      lightboxVideo.pause();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="map.css">
+
+<section class="map-section">
+  <h2 class="map-heading">📍 Aditya Physiotherapy Clinic</h2>
+  <p class="map-address">
+    Indus Garden, Centre Point, Bawadia Kalan, Rohit Nagar, Near Mahindra Petrol Pump, Bhopal
+  </p>
+  <div id="clinicMap"></div>
+  <a href="https://maps.app.goo.gl/fGkbcN8vBNKy6qJf8" target="_blank" class="directions-btn">
+    Get Directions
+  </a>
+</section>
+
+<script>
+function initMap() {
+  const clinicLocation = { lat: 23.2256, lng: 77.4020 }; // Bhopal Clinic
+
+  const map = new google.maps.Map(document.getElementById("clinicMap"), {
+    zoom: 16,
+    center: clinicLocation,
+    disableDefaultUI: false
+  });
+
+  new google.maps.Marker({
+    position: clinicLocation,
+    map: map,
+    title: "Aditya Physiotherapy Clinic",
+    animation: google.maps.Animation.DROP
+  });
+}
+</script>
+
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Opening Hours CSS -->
+  <link rel="stylesheet" href="opening-hours.css">
+</head>
+<body>
+
+  <!-- ===== Opening Hours Section ===== -->
+  <section id="opening-hours" class="opening-hours-section">
+    <div class="container">
+      <h2 class="section-title">Opening Hours</h2>
+      <p class="section-subtitle">We are here to serve you. Check our clinic hours below.</p>
+
+      <div class="hours-table">
+        <div class="hours-row">
+          <span class="day">Mon – Sat</span>
+          <span class="time">9:00 AM – 8:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Sunday</span>
+          <span class="time closed">Closed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional JS: Highlight today's day -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const today = new Date().getDay(); // 0=Sun,1=Mon,...
+      const rows = document.querySelectorAll(".hours-row");
+      rows.forEach((row, index) => {
+        // index 0 = Mon-Sat, index 1 = Sunday
+        if ((today >= 1 && today <= 6 && index === 0) || (today === 0 && index === 1)) {
+          row.style.background = "rgba(0, 245, 255, 0.2)";
+          row.style.borderLeft = "5px solid #00f5ff";
+        }
+      });
+    });
+  </script>
 
 
 
@@ -504,7 +746,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="footer-container">
     <!-- Logo & Description -->
     <div class="footer-logo">
-     
+      <img src="images/logo.png" alt="Aditya Physiotherapy Clinic Logo">
       <p>
         Aditya Physiotherapy Clinic & Day Care Services provides expert care, rehabilitation, and physiotherapy for all ages.
       </p>
@@ -588,4 +830,3 @@ window.addEventListener("load", function() {
   }
 });
 </script>
-

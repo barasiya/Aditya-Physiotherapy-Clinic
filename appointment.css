@@ -1,143 +1,148 @@
-/* ===== Reset & Global ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #f0f4f8;
-  color: #333;
-}
-
-/* ===== Appointment Section ===== */
+/* ====== Appointment Section ====== */
 .appointment-section {
-  padding: 80px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  font-family: "Poppins", sans-serif;
 }
 
+.appointment-section .container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Heading */
 .appointment-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.5rem;
   color: #0077b6;
+  margin-bottom: 10px;
   font-weight: 700;
 }
 
 .appointment-section p {
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-  color: #555;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #666;
+  font-size: 1.05rem;
 }
 
-/* ===== Form Container ===== */
+/* ===== Form ===== */
 form {
-  max-width: 550px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 35px 30px;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
-form:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* ===== Form Groups ===== */
 .form-group {
-  margin-bottom: 20px;
-  text-align: left;
-  position: relative;
+  margin-bottom: 22px;
 }
 
-.form-group label {
+label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #0077b6;
-  transition: color 0.3s;
+  color: #333;
+  font-size: 0.95rem;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+/* Inputs */
+input,
+select,
+textarea {
   width: 100%;
-  padding: 12px 15px;
-  border: 1.5px solid #ccc;
+  padding: 14px 16px;
+  border: 1.5px solid #ddd;
   border-radius: 10px;
   font-size: 1rem;
-  transition: border 0.3s, box-shadow 0.3s;
-  background: #f9f9f9;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  font-family: inherit;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #00f5ff;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0077b6;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.25);
   outline: none;
-  box-shadow: 0 0 10px rgba(0,245,255,0.3);
 }
 
 textarea {
-  resize: vertical;
-  min-height: 90px;
+  resize: none;
+  min-height: 110px;
 }
 
-/* ===== Submit Button ===== */
+/* ===== Button ===== */
 .submit-btn {
+  display: block;
   width: 100%;
-  background: #00f5ff;
-  color: #0d0d0d;
-  border: none;
-  padding: 14px;
-  font-size: 1.1rem;
+  padding: 15px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: #fff;
+  font-size: 1.05rem;
   font-weight: 600;
-  border-radius: 10px;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.3);
 }
 
 .submit-btn:hover {
-  background: #0077b6;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #005f8a, #0096c7);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 119, 182, 0.4);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
 }
 
 /* ===== Success Message ===== */
 .success-message {
   margin-top: 20px;
-  color: #2ecc71;
-  font-weight: 600;
   font-size: 1rem;
+  color: #2e7d32;
+  font-weight: 600;
+  text-align: center;
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
   display: none;
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* ===== Animations ===== */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* ===== Responsive ===== */
-@media(max-width: 600px) {
-  .appointment-section {
-    padding: 60px 15px;
-  }
-
-  form {
-    padding: 25px 20px;
+@media (max-width: 600px) {
+  .appointment-section .container {
+    padding: 30px 20px;
   }
 
   .appointment-section h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .appointment-section p {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
     font-size: 1rem;
+    padding: 13px;
   }
 }
