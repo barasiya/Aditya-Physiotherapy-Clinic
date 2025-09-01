@@ -15,7 +15,7 @@
       <img src="/ad.jpeg" alt="Clinic Logo">
     </div>
 
-    <!-- Hamburger button for mobile -->
+    <!-- Hamburger Icon -->
     <div class="hamburger">
       <span></span>
       <span></span>
@@ -28,13 +28,8 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#treatments">Treatments</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
       </ul>
-
-      <!-- Mobile buttons inside menu -->
-      <div class="mobile-buttons">
-        <a href="#appointment" class="btn-nav">Book Appointment</a>
-        <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
-      </div>
     </nav>
 
     <div class="nav-right">
@@ -60,17 +55,18 @@
 
 <!-- JS for Hamburger Menu -->
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navbar = document.querySelector('.navbar');
+const hamburger = document.querySelector('.hamburger');
+const navCenter = document.querySelector('.nav-center');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active'); // animate hamburger to X
-    navbar.classList.toggle('show');      // show/hide mobile menu
-  });
+hamburger.addEventListener('click', () => {
+  navCenter.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
 </script>
 
 </body>
 </html>
+
 
 
 
@@ -815,6 +811,7 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
 
