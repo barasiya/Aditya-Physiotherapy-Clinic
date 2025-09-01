@@ -28,7 +28,7 @@ ul {
   top: 0;
   left: 0;
   background: rgba(255,255,255,0.95);
-  z-index: 9999; /* higher than everything */
+  z-index: 9999;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -78,16 +78,16 @@ ul {
 
 /* ===== Hamburger (Mobile) ===== */
 .hamburger {
-  display: none;
+  display: none; /* hidden by default on desktop */
   flex-direction: column;
   justify-content: space-between;
   width: 35px;
   height: 28px;
   cursor: pointer;
-  position: fixed; /* fixed so it’s always visible */
+  position: fixed;
   top: 1rem;
   right: 1.5rem;
-  z-index: 10000; /* above header and hero */
+  z-index: 10000; /* above everything */
 }
 
 .hamburger span {
@@ -114,18 +114,17 @@ ul {
 /* ===== Mobile Menu ===== */
 .mobile-menu {
   display: none;
-  background: rgba(255,255,255,0.98);
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 5rem 2rem 2rem 2rem; /* leave space for header */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  padding-top: 5rem; /* leave space for header */
+  background: rgba(255,255,255,0.98);
   flex-direction: column;
-  overflow-y: auto;
   max-height: 0;
+  overflow-y: auto;
+  z-index: 9998;
   transition: max-height 0.4s ease;
-  z-index: 9999;
 }
 
 .mobile-menu.active {
@@ -224,13 +223,15 @@ ul {
 
 /* ===== Responsive ===== */
 @media(max-width:768px){
+  /* hide desktop navbar & call button */
   .navbar,
   .nav-right {
-    display: none;
+    display: none !important;
   }
 
+  /* show hamburger */
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
 
   .hero-content h1 {
