@@ -40,14 +40,14 @@ body {
 
 .navbar ul {
   display: flex;
-  list-style: none;
   gap: 20px;
+  list-style: none;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #333;
   font-weight: 500;
+  color: #333;
   transition: color 0.3s ease;
 }
 
@@ -80,14 +80,13 @@ body {
 }
 
 .hamburger span {
-  display: block;
   width: 25px;
   height: 3px;
   background: #333;
   transition: 0.3s;
 }
 
-/* Hamburger Active (X icon) */
+/* Active (X icon) */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -98,7 +97,7 @@ body {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ===== Responsive Navbar ===== */
+/* ===== Mobile Styles ===== */
 @media (max-width: 768px) {
   .navbar {
     position: fixed;
@@ -117,7 +116,7 @@ body {
   }
 
   .navbar.active {
-    right: 0;
+    right: 0; /* slide in */
   }
 
   .navbar ul {
@@ -148,7 +147,7 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff;
-  margin-top: 70px; /* header ke liye space */
+  margin-top: 70px; /* header space */
 }
 
 .hero-video {
