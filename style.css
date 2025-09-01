@@ -45,7 +45,7 @@ ul {
   height: 50px;
 }
 
-/* Desktop Navbar */
+/* ===== Desktop Navbar ===== */
 .navbar ul {
   display: flex;
   gap: 2rem;
@@ -62,7 +62,7 @@ ul {
   color: #0077b6;
 }
 
-/* Call Now Button */
+/* ===== Call Now Button ===== */
 .nav-right .btn-call-nav {
   background: #0077b6;
   color: #fff;
@@ -75,20 +75,24 @@ ul {
   background: #0096c7;
 }
 
-/* Hamburger (mobile) */
+/* ===== Hamburger (Mobile) ===== */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
   cursor: pointer;
-  gap: 5px;
+  z-index: 1100;
 }
 
 .hamburger span {
-  height: 3px;
-  width: 25px;
+  display: block;
+  height: 4px;
+  width: 100%;
   background: #111;
-  border-radius: 3px;
-  transition: all 0.3s;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -103,7 +107,7 @@ ul {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile Menu */
+/* ===== Mobile Menu ===== */
 .mobile-menu {
   display: none;
   background: rgba(255,255,255,0.98);
@@ -112,12 +116,13 @@ ul {
   top: 100%;
   left: 0;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  flex-direction: column;
+  padding: 1rem 2rem;
 }
 
 .mobile-menu ul {
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
   gap: 1rem;
 }
 
@@ -138,7 +143,7 @@ ul {
 }
 
 .mobile-menu.active {
-  display: block;
+  display: flex;
 }
 
 /* ===== Hero Section ===== */
