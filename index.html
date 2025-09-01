@@ -9,63 +9,46 @@
 </head>
 <body>
 
-<header class="header">
-  <div class="header-container">
-    <div class="logo">
-      <img src="/ad.jpeg" alt="Clinic Logo">
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="/ad.jpeg" alt="Clinic Logo">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#appointment">Appointment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <a href="#appointment">Book Now</a>
+      </div>
     </div>
+  </header>
 
-    <!-- Hamburger Icon -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <video class="hero-video" autoplay muted loop>
+      <source src="/142542-780232247_small.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Aditya Physiotherapy Clinic</h1>
+      <p>Your Health, Our Priority</p>
+      <div class="hero-buttons">
+        <a href="#appointment" class="btn">Book Appointment</a>
+        <a href="tel:+911234567890" class="btn-call">Call Now</a>
+      </div>
     </div>
-
-    <nav class="navbar">
-      <ul class="nav-center">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#treatments">Treatments</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
-      </ul>
-    </nav>
-
-    <div class="nav-right">
-      <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
-    </div>
-  </div>
-</header>
-
-<section id="hero" class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="/142542-780232247_small.mp4" type="video/mp4">
-  </video>
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Aditya Physiotherapy Clinic</h1>
-    <p>Your Health, Our Priority</p>
-    <div class="hero-buttons">
-      <a href="#appointment" class="btn">Book Appointment</a>
-      <a href="tel:+919876543210" class="btn btn-call">Call Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- JS for Hamburger Menu -->
-<script>
-const hamburger = document.querySelector('.hamburger');
-const navCenter = document.querySelector('.nav-center');
-
-hamburger.addEventListener('click', () => {
-  navCenter.classList.toggle('active');
-  hamburger.classList.toggle('active');
-});
-</script>
+  </section>
 
 </body>
 </html>
+
 
 
 
@@ -801,3 +784,4 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
