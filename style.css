@@ -63,7 +63,7 @@ ul {
   color: #0077b6;
 }
 
-/* ===== Call Now Button ===== */
+/* ===== Call Now Button (Desktop) ===== */
 .nav-right .btn-call-nav {
   background: #0077b6;
   color: #fff;
@@ -221,10 +221,12 @@ ul {
 
 /* ===== Responsive ===== */
 @media(max-width:768px){
+  /* Hide desktop navbar and desktop call button */
   .navbar, .nav-right {
-    display: none;
+    display: none !important;
   }
 
+  /* Show hamburger */
   .hamburger {
     display: flex !important;
     position: fixed;
