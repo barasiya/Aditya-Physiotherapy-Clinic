@@ -11,12 +11,10 @@
 
 <header class="header">
   <div class="header-container">
-    <!-- Logo -->
     <div class="logo">
       <img src="/ad.jpeg" alt="Clinic Logo">
     </div>
 
-    <!-- Desktop Navbar -->
     <nav class="navbar">
       <ul class="nav-center">
         <li><a href="#hero" class="active">Home</a></li>
@@ -27,12 +25,10 @@
       </ul>
     </nav>
 
-    <!-- Call Now Button (Desktop) -->
     <div class="nav-right">
       <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
     </div>
 
-    <!-- Hamburger Menu (Mobile) -->
     <div class="hamburger">
       <span></span>
       <span></span>
@@ -40,7 +36,6 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu">
     <ul>
       <li><a href="#hero">Home</a></li>
@@ -53,11 +48,9 @@
   </div>
 </header>
 
-<!-- Hero Section -->
 <section id="hero" class="hero">
   <video autoplay muted loop playsinline class="hero-video">
     <source src="/142542-780232247_small.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
   </video>
   <div class="overlay"></div>
   <div class="hero-content">
@@ -79,9 +72,7 @@
     mobileMenu.classList.toggle('active');
   });
 
-  // Close mobile menu when link clicked
-  const menuLinks = document.querySelectorAll('.mobile-menu ul li a');
-  menuLinks.forEach(link => {
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       mobileMenu.classList.remove('active');
@@ -91,7 +82,6 @@
 
 </body>
 </html>
-
 
 
 
@@ -836,6 +826,7 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
 
