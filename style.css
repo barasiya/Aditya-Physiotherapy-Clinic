@@ -23,12 +23,11 @@ a {
   background: rgba(0,0,0,0.8);
   z-index: 1000;
   padding: 10px 20px;
-  display: flex;
-  justify-content: center;
 }
 .header-container {
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,12 +64,13 @@ a {
 
 /* ===== Hamburger Menu ===== */
 .hamburger {
-  display: none;
+  display: none; /* Desktop पर hide */
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
   height: 22px;
   cursor: pointer;
+  z-index: 1001;
 }
 .hamburger span {
   height: 3px;
@@ -113,10 +113,10 @@ a {
     gap: 30px;
   }
   .nav-right {
-    display: none;
+    display: none; /* मोबाइल पर hidden */
   }
   .hamburger {
-    display: flex;
+    display: flex; /* मोबाइल पर दिखाएँ */
   }
 }
 
