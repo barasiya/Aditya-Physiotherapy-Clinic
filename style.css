@@ -80,23 +80,24 @@ ul {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 25px;
+  width: 35px;          /* slightly wider */
+  height: 28px;         /* slightly taller */
   cursor: pointer;
-  z-index: 1100;
+  z-index: 2000;        /* above header & overlay */
+  position: relative;   /* stacking context */
 }
 
 .hamburger span {
   display: block;
-  height: 3px;
+  height: 4px;          /* thicker for visibility */
   width: 100%;
-  background: #111;
+  background: #0077b6;  /* bright color */
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -104,7 +105,7 @@ ul {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* ===== Mobile Menu ===== */
