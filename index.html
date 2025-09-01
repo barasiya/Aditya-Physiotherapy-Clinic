@@ -13,10 +13,10 @@
   <header class="header">
     <div class="header-container">
       <div class="logo">
-        <img src="/ad.jpeg" alt="Clinic Logo">
+        <img src="ad.jpeg" alt="Clinic Logo">
       </div>
 
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <ul>
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -42,7 +42,7 @@
   <!-- ===== Hero Section ===== -->
   <section class="hero" id="home">
     <video class="hero-video" autoplay muted loop>
-      <source src="/142542-780232247_small.mp4" type="video/mp4">
+      <source src="142542-780232247_small.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
     <div class="overlay"></div>
@@ -56,30 +56,27 @@
     </div>
   </section>
 
-  <!-- ===== JS: Hamburger Menu & Smooth Scroll ===== -->
+  <!-- ===== JS (Hamburger + Menu Close) ===== -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.getElementById('hamburger');
-      const navbar = document.querySelector('.navbar');
+    // ===== Hamburger Toggle =====
+    const hamburger = document.getElementById("hamburger");
+    const navbar = document.getElementById("navbar");
 
-      // Toggle mobile menu
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navbar.classList.toggle('active');
-      });
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navbar.classList.toggle("active");
+    });
 
-      // Close menu when clicking a nav link on mobile
-      document.querySelectorAll('.navbar a').forEach(link => {
-        link.addEventListener('click', () => {
-          if(window.innerWidth <= 768){
-            hamburger.classList.remove('active');
-            navbar.classList.remove('active');
-          }
-        });
+    // ===== Close Menu on Link Click =====
+    document.querySelectorAll(".navbar a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove("active");
+          navbar.classList.remove("active");
+        }
       });
     });
   </script>
-
 </body>
 </html>
 
@@ -816,3 +813,4 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
