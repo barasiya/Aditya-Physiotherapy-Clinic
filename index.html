@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="header">
   <div class="header-container">
     <!-- Logo -->
@@ -30,7 +31,7 @@
       </ul>
     </nav>
 
-    <!-- Call Now Right -->
+    <!-- Call Now Button -->
     <div class="nav-right">
       <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
     </div>
@@ -83,6 +84,7 @@
     mobileMenu.classList.toggle('active');
   });
 
+  // Close mobile menu on link click
   const menuLinks = document.querySelectorAll('.mobile-menu ul li a');
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -91,8 +93,10 @@
     });
   });
 </script>
+
 </body>
 </html>
+
 
 
 
@@ -833,6 +837,7 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
 
