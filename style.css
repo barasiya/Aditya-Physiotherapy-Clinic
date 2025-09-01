@@ -27,9 +27,9 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255,255,255,0.95);
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .header-container {
@@ -39,6 +39,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  position: relative; /* important for hamburger stacking */
 }
 
 .logo img {
@@ -80,24 +81,23 @@ ul {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 35px;          /* slightly wider */
-  height: 28px;         /* slightly taller */
+  width: 35px;
+  height: 28px;
   cursor: pointer;
-  z-index: 2000;        /* above header & overlay */
-  position: relative;   /* stacking context */
+  z-index: 2000;
 }
 
 .hamburger span {
   display: block;
-  height: 4px;          /* thicker for visibility */
+  height: 4px;
   width: 100%;
-  background: #0077b6;  /* bright color */
+  background: #0077b6;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(6px,6px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -105,18 +105,18 @@ ul {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(6px,-6px);
 }
 
 /* ===== Mobile Menu ===== */
 .mobile-menu {
   display: none;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255,255,255,0.98);
   width: 100%;
   position: absolute;
   top: 100%;
   left: 0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   flex-direction: column;
   padding: 1rem 2rem;
   overflow: hidden;
@@ -175,7 +175,7 @@ ul {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
 }
 
 .hero-content {
@@ -219,7 +219,7 @@ ul {
 }
 
 /* ===== Responsive ===== */
-@media(max-width: 768px){
+@media(max-width:768px){
   .navbar,
   .nav-right {
     display: none;
@@ -237,12 +237,6 @@ ul {
     font-size: 1rem;
   }
 
-  .hero-buttons .btn {
-    padding: 0.5rem 1rem;
-    margin: 0.3rem;
-  }
-
-  /* ===== Hero Buttons (Mobile Fix) ===== */
   .hero-buttons {
     display: flex;
     flex-direction: column;
