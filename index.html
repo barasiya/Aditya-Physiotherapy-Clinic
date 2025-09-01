@@ -28,23 +28,6 @@
     <div class="nav-right">
       <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
     </div>
-
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <div class="mobile-menu">
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#treatments">Treatments</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
-      <li><a href="tel:+919876543210" class="btn-call-nav">Call Now</a></li>
-    </ul>
   </div>
 </header>
 
@@ -62,23 +45,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-  });
-
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-    });
-  });
-</script>
 
 </body>
 </html>
@@ -826,6 +792,7 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
 
