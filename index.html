@@ -56,7 +56,7 @@
   </div>
 </header>
 
-<!-- Hero Section with Video -->
+<!-- Hero Section -->
 <section id="hero" class="hero">
   <video autoplay muted loop playsinline class="hero-video">
     <source src="/142542-780232247_small.mp4" type="video/mp4">
@@ -73,18 +73,16 @@
   </div>
 </section>
 
-<!-- ===== JavaScript for Hamburger Menu ===== -->
+<!-- JS for Hamburger -->
 <script>
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
 
-  // Toggle mobile menu on hamburger click
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
   });
 
-  // Close mobile menu when any link is clicked
   const menuLinks = document.querySelectorAll('.mobile-menu ul li a');
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -95,6 +93,7 @@
 </script>
 </body>
 </html>
+
 
 
 
@@ -834,5 +833,6 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
