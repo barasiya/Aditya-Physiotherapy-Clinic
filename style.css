@@ -224,15 +224,19 @@ ul {
   .nav-right {
     display: none;
   }
+
   .hamburger {
     display: flex;
   }
+
   .hero-content h1 {
     font-size: 2rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
+
   .hero-buttons .btn {
     padding: 0.5rem 1rem;
     margin: 0.3rem;
