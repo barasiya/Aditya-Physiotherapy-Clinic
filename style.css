@@ -76,7 +76,7 @@ ul {
   background: #0096c7;
 }
 
-/* ===== Hamburger (Mobile) ===== */
+/* ===== Hamburger ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -84,9 +84,6 @@ ul {
   width: 35px;
   height: 28px;
   cursor: pointer;
-  position: fixed;
-  top: 1rem;
-  right: 1.5rem;
   z-index: 10000;
 }
 
@@ -115,13 +112,13 @@ ul {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 60px; /* below header */
+  top: 70px; /* below header */
   left: 0;
   width: 100%;
   background: rgba(255,255,255,0.98);
   flex-direction: column;
-  overflow-y: auto;
   max-height: 0;
+  overflow-y: auto;
   z-index: 9998;
   transition: max-height 0.4s ease;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -230,6 +227,9 @@ ul {
 
   .hamburger {
     display: flex !important;
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
   }
 
   .hero-content h1 {
