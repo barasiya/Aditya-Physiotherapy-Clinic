@@ -81,14 +81,14 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 25px; /* taller for spacing */
+  height: 25px;
   cursor: pointer;
   z-index: 1100;
 }
 
 .hamburger span {
   display: block;
-  height: 3px; /* thinner lines */
+  height: 3px;
   width: 100%;
   background: #111;
   border-radius: 2px;
@@ -120,12 +120,12 @@ ul {
   padding: 1rem 2rem;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s ease; /* smooth slide down */
+  transition: max-height 0.4s ease;
 }
 
 .mobile-menu.active {
   display: flex;
-  max-height: 500px; /* enough to show all items */
+  max-height: 500px;
 }
 
 .mobile-menu ul {
@@ -148,7 +148,7 @@ ul {
   background: #0077b6;
   color: #fff;
   text-align: center;
-  margin-top: 0.5rem; /* spacing between buttons */
+  margin-top: 0.5rem;
 }
 
 .mobile-menu ul li a:hover {
@@ -235,5 +235,20 @@ ul {
   .hero-buttons .btn {
     padding: 0.5rem 1rem;
     margin: 0.3rem;
+  }
+
+  /* ===== Hero Buttons (Mobile Fix) ===== */
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-buttons .btn,
+  .hero-buttons .btn-call {
+    width: 80%;
+    text-align: center;
+    padding: 0.6rem 0;
   }
 }
