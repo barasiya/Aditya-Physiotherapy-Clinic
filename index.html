@@ -23,23 +23,17 @@
     </div>
 
     <nav class="navbar">
-      <ul>
+      <ul class="nav-center">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#treatments">Treatments</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#appointment" class="btn-nav">Book Appointment</a></li>
       </ul>
-
-      <!-- Optional Mobile Buttons -->
-      <div class="mobile-buttons">
-        <a href="#appointment">Book Appointment</a>
-        <a href="tel:+919876543210">Call Now</a>
-      </div>
     </nav>
 
     <div class="nav-right">
-      <a href="tel:+919876543210">Call Now</a>
+      <a href="tel:+919876543210" class="btn-call-nav">Call Now</a>
     </div>
   </div>
 </header>
@@ -59,29 +53,19 @@
   </div>
 </section>
 
-<!-- JS for Hamburger Toggle -->
+<!-- JS for Hamburger Menu -->
 <script>
 const hamburger = document.querySelector('.hamburger');
-const navbar = document.querySelector('.navbar');
+const navCenter = document.querySelector('.nav-center');
 
 hamburger.addEventListener('click', () => {
+  navCenter.classList.toggle('active');
   hamburger.classList.toggle('active');
-  navbar.classList.toggle('show');
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -817,15 +801,3 @@ window.addEventListener("load", function() {
   }
 });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
