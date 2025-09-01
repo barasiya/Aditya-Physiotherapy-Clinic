@@ -75,17 +75,6 @@ ul {
   background: #0096c7;
 }
 
-/* ===== Hamburger (Mobile) - HIDDEN ===== */
-.hamburger {
-  display: none; /* hide hamburger */
-}
-
-/* ===== Mobile Menu - HIDDEN ===== */
-.mobile-menu {
-  display: none !important;
-  max-height: none;
-}
-
 /* ===== Hero Section ===== */
 .hero {
   position: relative;
