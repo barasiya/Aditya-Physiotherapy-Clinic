@@ -73,26 +73,30 @@
   </div>
 </section>
 
+<!-- ===== JavaScript for Hamburger Menu ===== -->
 <script>
-  // Hamburger toggle
+  // Select hamburger and mobile menu
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
 
+  // Toggle mobile menu on hamburger click
   hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
+    hamburger.classList.toggle('active'); // animate hamburger lines
+    mobileMenu.classList.toggle('active'); // show/hide mobile menu
   });
 
-  // Close mobile menu on link click
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
+  // Close mobile menu when a link is clicked
+  const menuLinks = document.querySelectorAll('.mobile-menu ul li a');
+  menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
       hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
     });
   });
 </script>
 </body>
 </html>
+
 
 
 
@@ -830,3 +834,4 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
