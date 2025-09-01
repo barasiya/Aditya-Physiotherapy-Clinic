@@ -135,18 +135,20 @@
   line-height: 1.7;
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive Adjustments ===== */
 @media (max-width: 992px) {
   .about-content {
-    flex-direction: row; /* keep row layout */
-    text-align: left;
+    flex-direction: column; /* stack image & text vertically */
+    align-items: center;    /* center them */
+    text-align: center;     /* center text */
     gap: 30px;
   }
   .about-text {
-    text-align: left;
+    text-align: center;
+    width: 100%;
   }
   .about-image img {
-    max-width: 280px;
+    max-width: 320px; /* slightly smaller on tablets */
   }
 }
 
@@ -155,11 +157,21 @@
     font-size: 1.6rem;
   }
   .about-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   .about-buttons a,
   .about-buttons button {
-    padding: 8px 14px;
-    font-size: 0.85rem;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  .doctor-info {
+    padding: 15px 18px;
+    border-left-width: 4px;
+  }
+  .clinic-features {
+    padding-left: 15px;
+  }
+  .about-image img {
+    max-width: 280px;
   }
 }
