@@ -95,9 +95,10 @@ ul {
 @media screen and (max-width: 768px) {
   .navbar {
     position: fixed;
-    top: 0;
+    top: 60px; /* start below header */
     right: -200px; /* hidden initially */
-    height: 100vh;
+    height: auto; /* auto height, not full screen */
+    min-height: 200px; /* optional */
     width: 200px; /* compact width */
     background: #fff;
     display: flex;
@@ -106,6 +107,7 @@ ul {
     transition: right 0.3s ease;
     flex-direction: column;
     box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px; /* rounded bottom */
     z-index: 1000;
   }
 
@@ -116,6 +118,7 @@ ul {
   .navbar ul {
     flex-direction: column;
     gap: 20px;
+    padding: 20px 0;
   }
 
   .nav-right {
