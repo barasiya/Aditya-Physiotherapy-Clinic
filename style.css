@@ -72,30 +72,41 @@ body {
   background: #005fa3;
 }
 
-/* ===== Hamburger Menu ===== */
+/* ===== Hamburger Menu (Modern Design) ===== */
 .hamburger {
   display: none; /* default hide on desktop */
+  width: 30px;
+  height: 22px;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1100;
 }
 
 .hamburger span {
-  width: 25px;
+  display: block;
   height: 3px;
+  width: 100%;
   background: #333;
-  transition: 0.3s;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 /* Hamburger animation */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Hover effect */
+.hamburger:hover span {
+  background: #0077cc;
 }
 
 /* ===== Responsive (Mobile < 768px) ===== */
@@ -126,7 +137,7 @@ body {
     gap: 15px;
   }
 
-  /* Hide book button on desktop area */
+  /* Hide book button in desktop area */
   .nav-right {
     display: none;
   }
