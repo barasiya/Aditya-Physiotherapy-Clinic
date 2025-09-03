@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Working Hamburger Menu</title>
+  <title>Website with Hamburger Menu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,20 +42,31 @@
 
   <!-- ===== Hero Section ===== -->
   <section class="hero" id="home">
-    <h1>Welcome to Our Website</h1>
+    <video class="hero-video" autoplay muted loop>
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Our Website</h1>
+      <p>Your health and care is our priority</p>
+      <div class="hero-buttons">
+        <a href="#book" class="btn">Book Appointment</a>
+        <a href="tel:+911234567890" class="btn-call">Call Now</a>
+      </div>
+    </div>
   </section>
 
   <script>
+    // ===== Hamburger Menu Toggle =====
     const hamburger = document.getElementById("hamburger");
     const navbar = document.getElementById("navbar");
 
-    // Toggle menu + X animation
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navbar.classList.toggle("active");
     });
 
-    // Close menu after clicking a link
+    // Close menu after clicking a link (mobile UX)
     document.querySelectorAll(".navbar a").forEach(link => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -65,6 +76,7 @@
   </script>
 </body>
 </html>
+
 
 
 
@@ -722,6 +734,7 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
 
