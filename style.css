@@ -116,16 +116,16 @@ body {
     right: 20px;
     background: #fff;
     width: 220px;
-    display: none;
     flex-direction: column;
     gap: 15px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     border-radius: 8px;
+    display: none; /* default hidden */
   }
 
   .navbar.active {
-    display: flex;
+    display: flex; /* show when active */
   }
 
   .navbar ul {
