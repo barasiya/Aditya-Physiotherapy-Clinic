@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Physiotherapy Clinic & Day Care Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Website with Hamburger Menu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- ===== Header ===== -->
   <header class="header">
     <div class="header-container">
+      <!-- Logo -->
       <div class="logo">
-        <img src="/ad.jpeg" alt="Clinic Logo">
+        <img src="logo.png" alt="Logo">
       </div>
 
-      <nav class="navbar">
+      <!-- Navbar -->
+      <nav class="navbar" id="navbar">
         <ul>
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#appointment">Appointment</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#book" class="btn-book">Book Now</a></li>
         </ul>
       </nav>
 
+      <!-- Book button (desktop only) -->
       <div class="nav-right">
-        <a href="#appointment" class="btn-book">Book Now</a>
+        <a href="#book" class="btn-book">Book Now</a>
       </div>
 
-      <!-- Hamburger Menu for Mobile -->
+      <!-- Hamburger -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -42,54 +43,37 @@
   <!-- ===== Hero Section ===== -->
   <section class="hero" id="home">
     <video class="hero-video" autoplay muted loop>
-      <source src="/142542-780232247_small.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
+      <source src="hero.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Aditya Physiotherapy Clinic</h1>
-      <p>Your Health, Our Priority</p>
+      <h1>Welcome to Our Website</h1>
+      <p>Your health and care is our priority</p>
       <div class="hero-buttons">
-        <a href="#appointment" class="btn">Book Appointment</a>
+        <a href="#book" class="btn">Book Appointment</a>
         <a href="tel:+911234567890" class="btn-call">Call Now</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== JS: Hamburger Menu + Scroll Effect ===== -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.getElementById('hamburger');
-      const navbar = document.querySelector('.navbar');
-      const header = document.querySelector('.header');
+    // ===== Hamburger Menu Toggle =====
+    const hamburger = document.getElementById("hamburger");
+    const navbar = document.getElementById("navbar");
 
-      // Toggle mobile menu
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navbar.classList.toggle('active');
-      });
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navbar.classList.toggle("active");
+    });
 
-      // Close menu when clicking a nav link on mobile
-      document.querySelectorAll('.navbar a').forEach(link => {
-        link.addEventListener('click', () => {
-          if(window.innerWidth <= 992){
-            hamburger.classList.remove('active');
-            navbar.classList.remove('active');
-          }
-        });
-      });
-
-      // Scroll effect for header
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
+    // Close menu after clicking a link (mobile UX)
+    document.querySelectorAll(".navbar a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navbar.classList.remove("active");
       });
     });
   </script>
-
 </body>
 </html>
 
@@ -827,4 +811,5 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
