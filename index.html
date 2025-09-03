@@ -23,7 +23,6 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#appointment">Appointment</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#appointment" class="btn-book">Book Now</a></li>
         </ul>
       </nav>
 
@@ -57,11 +56,12 @@
     </div>
   </section>
 
-  <!-- ===== JS: Hamburger Menu ===== -->
+  <!-- ===== JS: Hamburger Menu + Scroll Effect ===== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const hamburger = document.getElementById('hamburger');
       const navbar = document.querySelector('.navbar');
+      const header = document.querySelector('.header');
 
       // Toggle mobile menu
       hamburger.addEventListener('click', () => {
@@ -72,11 +72,20 @@
       // Close menu when clicking a nav link on mobile
       document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', () => {
-          if(window.innerWidth <= 768){
+          if(window.innerWidth <= 992){
             hamburger.classList.remove('active');
             navbar.classList.remove('active');
           }
         });
+      });
+
+      // Scroll effect for header
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
       });
     });
   </script>
@@ -818,3 +827,4 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
