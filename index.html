@@ -87,84 +87,6 @@
 
 
 
-<link rel="stylesheet" href="services.css">
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">Providing professional physiotherapy, rehabilitation, and day care services for all ages.</p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="images/electro_therapy.png" alt="Electro Therapy">
-          <h3>Electro Therapy</h3>
-          <p>Electrical stimulation treatments to relieve pain and improve muscle function.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="images/manual_therapy.png" alt="Manual Therapy">
-          <h3>Manual Therapy</h3>
-          <p>Hands-on techniques for joint mobilization, muscle relaxation, and pain reduction.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="images/massage_therapy.png" alt="Massage Therapy">
-          <h3>Massage Therapy</h3>
-          <p>Professional massage therapy to reduce stress, pain, and improve overall well-being.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="images/daycare.png" alt="Day Care">
-          <h3>Day Care</h3>
-          <p>Caring services for children, elderly, and patients needing assistance with daily activities.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="images/rehabilitation.png" alt="Rehabilitation">
-          <h3>Rehabilitation</h3>
-          <p>Structured rehab programs for post-surgery recovery, stroke, paralysis, and injury management.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="images/exercise_therapy.png" alt="Exercise Therapy">
-          <h3>Exercise Therapy</h3>
-          <p>Guided physical exercises to restore strength, flexibility, and improve mobility.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Fade-in Effect -->
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".service-card");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // animate only once
-        }
-      });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => {
-      card.classList.add("fade-in");
-      observer.observe(card);
-    });
-  });
-  </script>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -811,5 +733,6 @@ window.addEventListener("load", function() {
   }
 });
 </script>
+
 
 
