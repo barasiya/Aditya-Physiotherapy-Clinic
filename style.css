@@ -80,6 +80,7 @@ ul {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 1001;
 }
 
 .hamburger span {
@@ -95,25 +96,26 @@ ul {
   .navbar {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -200px; /* hidden initially */
     height: 100vh;
-    width: 250px;
+    width: 200px; /* compact width */
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s;
+    transition: right 0.3s ease;
     flex-direction: column;
-    z-index: 999;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
 
   .navbar.active {
-    right: 0;
+    right: 0; /* slide in */
   }
 
   .navbar ul {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .nav-right {
@@ -136,4 +138,59 @@ ul {
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-call {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #00f5ff;
+  color: #fff;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.hero-buttons .btn-call {
+  background: #ff5f5f;
+}
+
+.hero-buttons a:hover {
+  opacity: 0.8;
 }
