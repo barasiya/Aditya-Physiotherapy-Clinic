@@ -1,4 +1,4 @@
-/* ===== Global ===== */
+/* ===== Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -72,7 +72,7 @@ body {
   background: #005fa3;
 }
 
-/* ===== Hamburger Menu (Modern Design) ===== */
+/* ===== Hamburger ===== */
 .hamburger {
   display: none; /* default hide on desktop */
   width: 30px;
@@ -80,7 +80,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  transition: transform 0.3s ease;
   z-index: 1100;
 }
 
@@ -93,7 +92,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hamburger animation */
+/* Hamburger → X Animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -109,9 +108,8 @@ body {
   background: #0077cc;
 }
 
-/* ===== Responsive (Mobile < 768px) ===== */
+/* ===== Responsive (Mobile) ===== */
 @media (max-width: 768px) {
-  /* Hide navbar by default */
   .navbar {
     position: absolute;
     top: 70px;
@@ -126,38 +124,21 @@ body {
     border-radius: 8px;
   }
 
-  /* Show navbar when active */
   .navbar.active {
     display: flex;
   }
 
-  /* Stack items vertically */
   .navbar ul {
     flex-direction: column;
     gap: 15px;
   }
 
-  /* Hide book button in desktop area */
   .nav-right {
     display: none;
   }
 
-  /* Show hamburger on mobile */
   .hamburger {
     display: flex;
-  }
-
-  /* Divider inside dropdown */
-  .navbar ul::after {
-    content: "";
-    display: block;
-    margin: 10px 0;
-    border-top: 1px solid #eee;
-  }
-
-  /* Book button inside mobile menu */
-  .navbar ul li:last-child {
-    margin-top: 10px;
   }
 
   .navbar ul li a.btn-book {
